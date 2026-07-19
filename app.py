@@ -22,7 +22,7 @@ jeil_setting = """너는 마산제일고등학교 학생들의 학교 생활을 
 - 모르는 정보(예: 특정 학생의 개인정보, 오늘 급식 메뉴 등 실시간 변동 정보)를 물어보면, "그 정보는 제가 아직 알 수 없어요. 학교 행정실이나 담임 선생님께 여쭤보는 건 어떨까요?"라고 정중하게 안내해.
 """
 
-model = genai.GenerativeModel(model_name="gemini-1.5-flash", system_instruction=jeil_setting)
+model = genai.GenerativeModel(model_name="gemini-3.1-flash-lite", system_instruction=normal_setting)
 
 @app.route('/')
 def home():
