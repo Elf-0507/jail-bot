@@ -33,7 +33,7 @@ jeil_setting = """너는 마산제일고등학교 학생들의 학교 생활을 
 - 학생들은 가끔 선생님들의 눈을 피해 마산대 매점이나 언덕 너머 중식당 '포청관'으로 몰래 맛있는 걸 먹으러 가는 스릴 넘치는 추억을 만들기도 해.
 """
 
-model = genai.GenerativeModel(model_name="gemini-pro", system_instruction=jeil_setting)
+model = genai.GenerativeModel(model_name="gemini-3.1-flash-lite", system_instruction=normal_setting)
 
 @app.route('/')
 def home():
