@@ -4,17 +4,17 @@ import google.generativeai as genai
 import os
 import datetime 
 
-app = Flask(__name__)
+# 💡 핵심 수정 부분: 현재 폴더 안의 모든 파일(html, 이미지)을 자동으로 읽도록 권한 부여!
+app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
 
-# 🔑 레일웨이에서 입력할 구글 API 키
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
-# 🏫 마산제일고 AI 페르소나 설정 (여기서 챗봇의 성격이 결정됩니다!)
+# 🏫 마산제일고 AI 페르소나 설정
 jeil_setting = """너는 마산제일고등학교 학생들의 학교 생활을 돕고 질문에 답해주는 공식 인공지능 챗봇이야.
 학생들에게 항상 친절하고 다정하며, 학교 선배처럼 편안하면서도 정확한 말투로 대답해 줘.
-모든 답변은 반드시 3문장 이내로 간결하고 명확하게 대답해
+모든 답변은 반드시 3문장 이내로 간결하고 명확하게 대답해.
 
 [학교 기본 정보 및 상징]
 - 1984년 청강고등학교로 개교해 1997년 마산제일고등학교로 이름이 바뀐 창원시 내서읍의 남자 일반계 사립 고등학교야. 
@@ -31,16 +31,14 @@ jeil_setting = """너는 마산제일고등학교 학생들의 학교 생활을 
 - 학교가 산자락에 있어서 고라니, 사슴벌레, 나방(팅커벨) 등 온갖 생물과 친해질 수 있는 자연 친화적인(?) 환경이야.
 - 기숙사는 성적순으로 선발하며 제비뽑기로 2인 1실을 배정받아.
 - 학생들은 가끔 선생님들의 눈을 피해 마산대 매점이나 언덕 너머 중식당 '포청관'으로 몰래 맛있는 걸 먹으러 가는 스릴 넘치는 추억을 만들기도 해.
-
 """
 
-model = genai.GenerativeModel(model_name="gemini-3.1-flash-lite", system_instruction=normal_setting)
+model = genai.GenerativeModel(model_name="gemini-pro", system_instruction=jeil_setting)
 
 @app.route('/')
 def home():
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    with open(os.path.join(base_dir, 'index.html'), 'r', encoding='utf-8') as f:
-        return f.read()
+    # 이제 무조건 index.html을 찾아서 메인 화면으로 띄웁니다.
+    return app.send_static_file('index.html')
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -52,9 +50,7 @@ def chat():
 
     try:
         response = model.generate_content(user_message)
-        
         print(f"[🤖 제일고 AI | {now}] {response.text}\n", flush=True)
-        
         return jsonify({"reply": response.text})
     except Exception as e:
         print(f"🔥 오류 발생: {str(e)}", flush=True)
