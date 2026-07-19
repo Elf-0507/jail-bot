@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마산제일고등학교 AI 챗봇</title>
+    <style>
+        :root {
+            /* 마산제일고 로고에서 추출한 시그니처 컬러 */
+            --jeil-blue: #1a29cc; /* 로고의 진하고 선명한 파란색 */
+            --jeil-yellow: #fec918; /* 로고의 밝고 따뜻한 노란색 */
+            --bg-color: #f4f6f9;
+        }
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 480px;
+            height: 85vh;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(26, 41, 204, 0.15); /* 파란색 톤의 은은한 그림자 */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-top: 6px solid var(--jeil-yellow); /* 상단 노란색 포인트 라인 */
+        }
+        @media (max-width: 600px) {
+            .chat-container { height: 100vh; border-radius: 0; }
+        }
+        
+        /* 헤더 디자인 */
+        .chat-header {
+            background-color: var(--jeil-blue);
+            color: white;
+            padding: 18px;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            border-bottom: 3px solid var(--jeil-yellow); /* 파란 바탕 아래 노란 선 */
+        }
+        
+        /* 대화창 영역 및 워터마크 배경 설정 */
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #ffffff;
+            position: relative; /* 워터마크 기준점 */
+        }
+        
+        /* 🏫 배경 이미지 (올려주신 로고) 워터마크 효과 */
+        .chat-messages::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: 70%;
+            /* 깃허브에 올릴 이미지 파일 이름과 똑같이 맞춰야 합니다 */
+            background-image: url('이미지.jpeg'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.08; /* 글씨를 가리지 않도록 투명도를 아주 옅게 설정 */
+            pointer-events: none; /* 클릭을 방해하지 않음 */
+            z-index: 0; /* 글자보다 뒤에 위치 */
+        }
+        
+        .chat-messages::-webkit-scrollbar { width: 6px; }
+        .chat-messages::-webkit-scrollbar-thumb { background: #b0c4de; border-radius: 10px; }
+
+        /* 메시지 말풍선 디자인 */
+        .message {
+            position: relative;
+            z-index: 1; /* 워터마크보다 앞으로 나오게 설정 */
+            margin-bottom: 15px;
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            word-break: break-word;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        /* 사용자(학생) 메시지: 제일고 노란색 */
+        .message.user {
+            background-color: var(--jeil-yellow);
+            color: #111; /* 노란 바탕엔 검은 글씨가 눈에 잘 띕니다 */
+            font-weight: 600;
+            margin-left: auto;
+            border-bottom-right-radius: 2px;
+        }
+        
+        /* 봇(학교 AI) 메시지: 깔끔한 흰 바탕 + 파란색 포인트 */
+        .message.bot {
+            background-color: white;
+            color: #222;
+            margin-right: auto;
+            border-bottom-left-radius: 2px;
+            border: 1px solid #e0e6ed;
+            border-left: 4px solid var(--jeil-blue);
+            white-space: pre-line;
+        }
+        
+        /* 입력창 영역 */
+        .chat-input-area {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            padding: 15px;
+            background-color: white;
+            border-top: 1px solid #eee;
+        }
+        .chat-input {
+            flex: 1;
+            padding: 12px 16px;
+            background-color: #f9fafb;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .chat-input:focus {
+            border-color: var(--jeil-blue);
+            background-color: white;
+        }
+        .send-btn {
+            background-color: var(--jeil-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .send-btn:hover {
+            background-color: #131e99;
+        }
+
+        /* 로딩 표시기 애니메이션 */
+        .typing-indicator {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 4px;
+            padding: 12px 16px;
+            background-color: white;
+            border-radius: 12px;
+            border-bottom-left-radius: 2px;
+            width: fit-content;
+            border: 1px solid #e0e6ed;
+            border-left: 4px solid var(--jeil-blue);
+            margin-bottom: 15px;
+        }
+        .dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--jeil-blue);
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        .dot:nth-child(1) { animation-delay: -0.32s; }
+        .dot:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+<div class="chat-container">
+    <div class="chat-header">
+        마산제일고등학교 AI
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <div class="message bot">환영합니다! <b>마산제일고등학교 공식 인공지능 챗봇</b>입니다.<br><br>학교 생활, 학사 일정, 동아리 정보 등 궁금한 점을 자유롭게 질문해 보세요! 🏫</div>
+    </div>
+    <div class="chat-input-area">
+        <input type="text" class="chat-input" id="chatInput" placeholder="질문을 입력하세요..." onkeypress="if(event.key==='Enter') sendMessage()">
+        <button class="send-btn" onclick="sendMessage()">전송</button>
+    </div>
+</div>
+
+<script>
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+
+    function appendMessage(text, sender) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `message ${sender}`;
+        msgDiv.innerHTML = text;
+        chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'typing-indicator';
+        typingDiv.id = 'typingIndicator';
+        typingDiv.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
+        chatMessages.appendChild(typingDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function removeTypingIndicator() {
+        const typingDiv = document.getElementById('typingIndicator');
+        if (typingDiv) {
+            typingDiv.remove();
+        }
+    }
+
+    async function sendMessage() {
+        const message = chatInput.value.trim();
+        if (!message) return;
+        
+        appendMessage(message, 'user');
+        chatInput.value = '';
+
+        showTypingIndicator();
+
+        try {
+            const response = await fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message })
+            });
+            const data = await response.json();
+            removeTypingIndicator();
+            appendMessage(data.reply || "오류가 발생했습니다.", 'bot');
+        } catch (error) {
+            removeTypingIndicator();
+            appendMessage("서버 연결에 실패했습니다.", 'bot');
+        }
+    }
+</script>
+</body>
+</html>
