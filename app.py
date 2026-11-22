@@ -8,6 +8,7 @@ import json
 import re
 from zoneinfo import ZoneInfo
 from school_knowledge import SchoolKnowledge
+from neis_live import NeisLive
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
@@ -49,6 +50,7 @@ jeil_setting = """너는 마산제일고등학교 마스코트 '제일콩'이야
 """
 
 school_knowledge = SchoolKnowledge()
+neis_live = NeisLive()
 
 model = genai.GenerativeModel(model_name="gemini-3.1-flash-lite", system_instruction=jeil_setting)
 
@@ -88,6 +90,11 @@ def chat():
         except Exception as e:
             print(f"🔥 이미지 생성 오류: {str(e)}", flush=True)
             return jsonify({"reply": "앗, 그림을 만드는 중에 오류가 났어요오. 잠시 후 다시 시도해 주세요!"})
+
+    # 급식·시간표는 저장된 자료나 모델 추측 대신 NEIS를 직접 조회합니다.
+    live_reply = neis_live.answer(user_message, pending=data.get('neis_context'))
+    if live_reply is not None:
+        return jsonify(live_reply)
 
     # 일반 대화 처리
     try:
