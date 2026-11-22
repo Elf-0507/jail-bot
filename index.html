@@ -200,10 +200,42 @@
     const chatMessages = document.getElementById('chatMessages');
     const chatInput = document.getElementById('chatInput');
 
-    function appendMessage(text, sender) {
+    function appendMessage(text, sender, imageUrl, sources, updatedAt) {
         const msgDiv = document.createElement('div');
         msgDiv.className = `message ${sender}`;
-        msgDiv.innerHTML = text;
+        msgDiv.textContent = text;
+        if (imageUrl && imageUrl.startsWith('https://image.pollinations.ai/prompt/')) {
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = '요청한 그림';
+            img.style.cssText = 'width:100%;border-radius:12px;margin-top:10px';
+            img.addEventListener('error', () => img.replaceWith(document.createTextNode('그림을 불러오지 못했어요오. 잠시 후 다시 시도해 주세요!')));
+            msgDiv.appendChild(img);
+        }
+        if (Array.isArray(sources) && sources.length) {
+            const details = document.createElement('div');
+            details.style.cssText = 'margin-top:12px;font-size:.8rem;line-height:1.5;border-top:1px solid #e0e6ed;padding-top:8px';
+            details.textContent = '공식 홈페이지 출처';
+            sources.forEach(source => {
+                try {
+                    const url = new URL(source.url);
+                    if (url.protocol !== 'https:' || url.hostname !== 'masanjeil-h.gne.go.kr') return;
+                    const link = document.createElement('a');
+                    link.href = url.href;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.style.cssText = 'display:block;color:var(--jeil-blue);margin-top:4px';
+                    link.textContent = '[' + source.number + '] ' + source.title;
+                    details.appendChild(link);
+                } catch (_) {}
+            });
+            if (updatedAt) {
+                const note = document.createElement('div');
+                note.textContent = '자료 수집일: ' + updatedAt.slice(0, 10);
+                details.appendChild(note);
+            }
+            msgDiv.appendChild(details);
+        }
         chatMessages.appendChild(msgDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
@@ -241,7 +273,7 @@
             });
             const data = await response.json();
             removeTypingIndicator();
-            appendMessage(data.reply || "오류가 발생했습니다.", 'bot');
+            appendMessage(data.reply || "오류가 발생했습니다.", 'bot', data.image_url, data.sources, data.knowledge_updated_at);
         } catch (error) {
             removeTypingIndicator();
             appendMessage("서버 연결에 실패했습니다.", 'bot');

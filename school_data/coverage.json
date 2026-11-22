@@ -1,0 +1,746 @@
+{
+  "schema_version": 1,
+  "source": "https://masanjeil-h.gne.go.kr/masanjeil-h/main.do",
+  "collected_at": "2026-11-22T23:24:26.533143+09:00",
+  "coverage": {
+    "menus": {
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=24045&mi=85664": "학교장인사말",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=21023&mi=556432": "연혁",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=21024&mi=556433": "현황",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=21025&mi=556434": "연도별 졸업일자",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=21027&mi=556437": "학교배치도",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/ss/schulSymbol/selectSongSymbolInfo.do?mi=85852": "학교상징",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8983&mi=85850": "교육목표",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=15795&mi=85854": "교직원소개",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=34373&mi=581766": "학교홍보동영상",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8977&mi=538804": "학교둘러보기",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/lm/location/view.do?mi=85857": "찾아오시는 길",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/common/schlState.do?mi=558503": "학교알리미",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73845&mi=85865": "공지사항",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73894&mi=85918": "가정통신문",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=135229&mi=155502": "포토뉴스",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=218334&mi=504659": "월별교육성과",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/sv/schdulView/schdulCalendarView.do?mi=506645": "월간행사일정",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=188170&mi=208711": "교원역량개발지원",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73891&mi=85915": "보건교육",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/dv/dietView/selectDietCalendarView.do?mi=157799": "학교급식",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=99849&mi=500575": "급식소알리미",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=149738&mi=169646": "영양상담",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5040823&mi=530931": "오늘의 급식",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=20340&mi=549932": "마산제일고의 강점",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=20333&mi=549933": "우리학교소개",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=20381&mi=550386": "농어촌 입학전형 안내",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=20337&mi=549934": "모집요강",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=21647&mi=560842": "최근 3년 진학현황",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8980&mi=85863": "4無운동",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=21022&mi=556391": "CHAMP교육",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8972&mi=159824": "기타 특색 교육",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8982&mi=85862": "역점과제",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8965&mi=502349": "운영계획",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5303659&mi=583097": "학부모동아리 활동",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8955&mi=85931": "청강학사현황 및 안내",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73905&mi=85932": "학사게시판",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73864&mi=85886": "전학년 교육과정",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=133026&mi=153356": "평가계획",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8971&mi=502591": "강좌소개",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5028285&mi=524457": "운영계획 및 성과",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=228306&mi=500758": "연간계획표",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=228309&mi=249429": "자율활동",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5209422&mi=565690": "1학급 1특색활동",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=17959&mi=528741": "동아리",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5100416&mi=249433": "봉사활동",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=228314&mi=504710": "진로활동",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=17958&mi=528740": "자율동아리",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=16388&mi=504732": "연간시상계획",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5162984&mi=556390": "학교연합공동교육과정",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8969&mi=85867": "연간학사일정",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=136899&mi=502593": "학생회활동",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8962&mi=500759": "제일축전/작품전",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=218258&mi=239267": "사진앨범",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5162988&mi=556400": "갤러리 JEIL",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5043020&mi=530760": "AI 중점 학교",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5165438&mi=558190": "교과특성화학교",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5167883&mi=560833": "고교학점제 운영",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5245770&mi=570065": "수학나눔학교",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5162995&mi=556402": "전문적학습공동체",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5162991&mi=556403": "연수원학교",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5249337&mi=571977": "교사자료실",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73900&mi=85926": "성고충상담",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=165101&mi=503718": "학교폭력예방",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=190422&mi=210889": "운영안내",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=190421&mi=210888": "교사학부모자료",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=190423&mi=210890": "학생자료",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73880&mi=85901": "학습자료",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=137941&mi=158083": "진로진학정보",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5162999&mi=556410": "각종 양식",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73863&mi=85885": "학교규칙",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8958&mi=85891": "규정",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=8957&mi=85892": "명단",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73873&mi=85893": "운영위게시판",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=14960&mi=169817": "사이버학교운영위원회",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73874&mi=85894": "학교회계",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/common/civCompInfo.do?mi=281953": "전자민원서비스안내",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=260221&mi=281954": "민원상담방",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=260222&mi=281955": "묻고 답하기",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=260228&mi=281959": "민원예약및발급상담서비스",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=178185&mi=198836": "개인정보처리방침",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=209677&mi=230277": "학교평가",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73897&mi=85921": "학교예산 학부모참여방",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73898&mi=85922": "학부모 의견수렴결과방",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=223178&mi=244121": "상품권구매공개방(25년 이전)",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=236977&mi=258091": "기관장출장공개",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73879&mi=85899": "업무추진비공개(25년 이전)",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/common/rcritPblanc.do?mi=533296": "채용정보",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5212106&mi=567609": "수익자부담경비",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/common/openInfoSys.do?mi=571102": "정보공개제도안내",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73876&mi=85896": "사전정보공표",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5028186&mi=524437": "비공개대상 세부기준",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/api/openApi.do?mi=85897": "정보목록",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/common/infoApply.do?mi=85898": "정보공개청구",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=24787&mi=579124": "정관",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=24788&mi=579125": "이사회(임원현황, 회의록)",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=24789&mi=579126": "예산 / 결산",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5282832&mi=579266": "학교발전기금",
+      "https://masanjeil-h.gne.go.kr/masanjeil-h/common/openInfoCprEm.do": "이메일주소무단수집거부"
+    },
+    "boards": {
+      "공지사항": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73845&mi=85865",
+        "pages": 33
+      },
+      "가정통신문": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73894&mi=85918",
+        "pages": 47
+      },
+      "포토뉴스": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=135229&mi=155502",
+        "pages": 13
+      },
+      "월별교육성과": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=218334&mi=504659",
+        "pages": 4
+      },
+      "교원역량개발지원": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=188170&mi=208711",
+        "pages": 1
+      },
+      "보건교육": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73891&mi=85915",
+        "pages": 5
+      },
+      "급식소알리미": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=99849&mi=500575",
+        "pages": 17
+      },
+      "영양상담": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=149738&mi=169646",
+        "pages": 4
+      },
+      "오늘의 급식": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5040823&mi=530931",
+        "pages": 95
+      },
+      "학부모동아리 활동": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5303659&mi=583097",
+        "pages": 1
+      },
+      "학사게시판": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73905&mi=85932",
+        "pages": 1
+      },
+      "전학년 교육과정": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73864&mi=85886",
+        "pages": 2
+      },
+      "평가계획": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=133026&mi=153356",
+        "pages": 2
+      },
+      "운영계획 및 성과": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5028285&mi=524457",
+        "pages": 2
+      },
+      "연간계획표": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=228306&mi=500758",
+        "pages": 1
+      },
+      "자율활동": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=228309&mi=249429",
+        "pages": 1
+      },
+      "1학급 1특색활동": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5209422&mi=565690",
+        "pages": 10
+      },
+      "봉사활동": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5100416&mi=249433",
+        "pages": 1
+      },
+      "진로활동": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=228314&mi=504710",
+        "pages": 1
+      },
+      "학교연합공동교육과정": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5162984&mi=556390",
+        "pages": 2
+      },
+      "학생회활동": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=136899&mi=502593",
+        "pages": 4
+      },
+      "사진앨범": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=218258&mi=239267",
+        "pages": 1
+      },
+      "갤러리 JEIL": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5162988&mi=556400",
+        "pages": 2
+      },
+      "AI 중점 학교": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5043020&mi=530760",
+        "pages": 1
+      },
+      "교과특성화학교": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5165438&mi=558190",
+        "pages": 1
+      },
+      "고교학점제 운영": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5167883&mi=560833",
+        "pages": 1
+      },
+      "수학나눔학교": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5245770&mi=570065",
+        "pages": 1
+      },
+      "전문적학습공동체": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5162995&mi=556402",
+        "pages": 3
+      },
+      "연수원학교": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5162991&mi=556403",
+        "pages": 2
+      },
+      "교사자료실": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5249337&mi=571977",
+        "pages": 1
+      },
+      "성고충상담": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73900&mi=85926",
+        "pages": 0
+      },
+      "학교폭력예방": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=165101&mi=503718",
+        "pages": 1
+      },
+      "운영안내": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=190422&mi=210889",
+        "pages": 1
+      },
+      "교사학부모자료": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=190421&mi=210888",
+        "pages": 1
+      },
+      "학생자료": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=190423&mi=210890",
+        "pages": 1
+      },
+      "학습자료": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73880&mi=85901",
+        "pages": 6
+      },
+      "진로진학정보": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=137941&mi=158083",
+        "pages": 55
+      },
+      "각종 양식": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5162999&mi=556410",
+        "pages": 1
+      },
+      "학교규칙": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73863&mi=85885",
+        "pages": 3
+      },
+      "운영위게시판": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73873&mi=85893",
+        "pages": 5
+      },
+      "학교회계": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73874&mi=85894",
+        "pages": 9
+      },
+      "민원상담방": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=260221&mi=281954",
+        "pages": 0
+      },
+      "묻고 답하기": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=260222&mi=281955",
+        "pages": 0
+      },
+      "민원예약및발급상담서비스": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=260228&mi=281959",
+        "pages": 0
+      },
+      "개인정보처리방침": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=178185&mi=198836",
+        "pages": 2
+      },
+      "학교평가": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=209677&mi=230277",
+        "pages": 1
+      },
+      "학교예산 학부모참여방": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73897&mi=85921",
+        "pages": 1
+      },
+      "학부모 의견수렴결과방": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73898&mi=85922",
+        "pages": 0
+      },
+      "상품권구매공개방(25년 이전)": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=223178&mi=244121",
+        "pages": 7
+      },
+      "기관장출장공개": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=236977&mi=258091",
+        "pages": 5
+      },
+      "업무추진비공개(25년 이전)": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73879&mi=85899",
+        "pages": 7
+      },
+      "수익자부담경비": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5212106&mi=567609",
+        "pages": 4
+      },
+      "사전정보공표": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73876&mi=85896",
+        "pages": 1
+      },
+      "비공개대상 세부기준": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5028186&mi=524437",
+        "pages": 1
+      },
+      "학교발전기금": {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=5282832&mi=579266",
+        "pages": 2
+      }
+    },
+    "visited_pages": 3816,
+    "limit_reached": false,
+    "remaining_queue": 0,
+    "skipped": [
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/cm/cntnts/cntntsView.do?cntntsId=34373&mi=581766",
+        "reason": "empty_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73900&mi=85926",
+        "reason": "empty_or_restricted_list"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=260221&mi=281954",
+        "reason": "empty_or_restricted_list"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=260222&mi=281955",
+        "reason": "empty_or_restricted_list"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=260228&mi=281959",
+        "reason": "empty_or_restricted_list"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttList.do?bbsId=73898&mi=85922",
+        "reason": "empty_or_restricted_list"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=100357068",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=100357060",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=100089995",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=90658958",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=90565199",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=90364002",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=90305013",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=90053408",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=89442353",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=89236518",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=530931&nttSn=100322262",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=89235462",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=88866843",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=88608229",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=88347638",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=88158387",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=88145198",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=86882427",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=86779507",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=556403&nttSn=86779502",
+        "reason": "no_public_body"
+      },
+      {
+        "url": "https://masanjeil-h.gne.go.kr/masanjeil-h/na/ntt/selectNttInfo.do?mi=244121&nttSn=88245123",
+        "reason": "no_public_body"
+      }
+    ],
+    "limitations": [
+      "로그인/권한 제한 자료 제외",
+      "첨부파일 다운로드는 robots.txt에 따라 제외",
+      "외부 사이트 링크는 수집 범위 밖",
+      "학교소개 일부 이미지 OCR 보충. 게시판 사진 전체 및 동영상은 미추출.",
+      "달력: 지정한 연도 1월부터 다음 해 2월까지 조회; 전체 과거·미래는 미수집",
+      "학교소개 일부 이미지 OCR 보충. 게시판 사진 전체 및 동영상은 미추출.",
+      "달력: 지정한 연도 1월부터 다음 해 2월까지 조회; 전체 과거·미래는 미수집"
+    ],
+    "ocr": {
+      "pages": 7,
+      "images": 26,
+      "scope": "학교소개의 고정 콘텐츠 이미지",
+      "limitations": "OCR 오인식 가능. 게시판 사진 전체의 글자는 미추출."
+    },
+    "calendar": {
+      "checked": [
+        {
+          "month": "2026/01",
+          "kind": "학사일정",
+          "rows": 1
+        },
+        {
+          "month": "2026/01",
+          "kind": "아침식사",
+          "rows": 14
+        },
+        {
+          "month": "2026/01",
+          "kind": "점심식사",
+          "rows": 14
+        },
+        {
+          "month": "2026/01",
+          "kind": "저녁식사",
+          "rows": 11
+        },
+        {
+          "month": "2026/02",
+          "kind": "학사일정",
+          "rows": 31
+        },
+        {
+          "month": "2026/02",
+          "kind": "아침식사",
+          "rows": 12
+        },
+        {
+          "month": "2026/02",
+          "kind": "점심식사",
+          "rows": 12
+        },
+        {
+          "month": "2026/02",
+          "kind": "저녁식사",
+          "rows": 10
+        },
+        {
+          "month": "2026/03",
+          "kind": "학사일정",
+          "rows": 13
+        },
+        {
+          "month": "2026/03",
+          "kind": "아침식사",
+          "rows": 25
+        },
+        {
+          "month": "2026/03",
+          "kind": "점심식사",
+          "rows": 26
+        },
+        {
+          "month": "2026/03",
+          "kind": "저녁식사",
+          "rows": 21
+        },
+        {
+          "month": "2026/04",
+          "kind": "학사일정",
+          "rows": 17
+        },
+        {
+          "month": "2026/04",
+          "kind": "아침식사",
+          "rows": 26
+        },
+        {
+          "month": "2026/04",
+          "kind": "점심식사",
+          "rows": 26
+        },
+        {
+          "month": "2026/04",
+          "kind": "저녁식사",
+          "rows": 21
+        },
+        {
+          "month": "2026/05",
+          "kind": "학사일정",
+          "rows": 26
+        },
+        {
+          "month": "2026/05",
+          "kind": "아침식사",
+          "rows": 18
+        },
+        {
+          "month": "2026/05",
+          "kind": "점심식사",
+          "rows": 27
+        },
+        {
+          "month": "2026/05",
+          "kind": "저녁식사",
+          "rows": 22
+        },
+        {
+          "month": "2026/06",
+          "kind": "학사일정",
+          "rows": 25
+        },
+        {
+          "month": "2026/06",
+          "kind": "아침식사",
+          "rows": 26
+        },
+        {
+          "month": "2026/06",
+          "kind": "점심식사",
+          "rows": 27
+        },
+        {
+          "month": "2026/06",
+          "kind": "저녁식사",
+          "rows": 23
+        },
+        {
+          "month": "2026/07",
+          "kind": "학사일정",
+          "rows": 35
+        },
+        {
+          "month": "2026/07",
+          "kind": "아침식사",
+          "rows": 24
+        },
+        {
+          "month": "2026/07",
+          "kind": "점심식사",
+          "rows": 24
+        },
+        {
+          "month": "2026/07",
+          "kind": "저녁식사",
+          "rows": 21
+        },
+        {
+          "month": "2026/08",
+          "kind": "학사일정",
+          "rows": 28
+        },
+        {
+          "month": "2026/08",
+          "kind": "아침식사",
+          "rows": 22
+        },
+        {
+          "month": "2026/08",
+          "kind": "점심식사",
+          "rows": 22
+        },
+        {
+          "month": "2026/08",
+          "kind": "저녁식사",
+          "rows": 17
+        },
+        {
+          "month": "2026/09",
+          "kind": "학사일정",
+          "rows": 24
+        },
+        {
+          "month": "2026/09",
+          "kind": "아침식사",
+          "rows": 26
+        },
+        {
+          "month": "2026/09",
+          "kind": "점심식사",
+          "rows": 23
+        },
+        {
+          "month": "2026/09",
+          "kind": "저녁식사",
+          "rows": 23
+        },
+        {
+          "month": "2026/10",
+          "kind": "학사일정",
+          "rows": 34
+        },
+        {
+          "month": "2026/10",
+          "kind": "아침식사",
+          "rows": 22
+        },
+        {
+          "month": "2026/10",
+          "kind": "점심식사",
+          "rows": 23
+        },
+        {
+          "month": "2026/10",
+          "kind": "저녁식사",
+          "rows": 21
+        },
+        {
+          "month": "2026/11",
+          "kind": "학사일정",
+          "rows": 26
+        },
+        {
+          "month": "2026/11",
+          "kind": "아침식사",
+          "rows": 20
+        },
+        {
+          "month": "2026/11",
+          "kind": "점심식사",
+          "rows": 19
+        },
+        {
+          "month": "2026/11",
+          "kind": "저녁식사",
+          "rows": 19
+        },
+        {
+          "month": "2026/12",
+          "kind": "학사일정",
+          "rows": 22
+        },
+        {
+          "month": "2026/12",
+          "kind": "아침식사",
+          "rows": 1
+        },
+        {
+          "month": "2026/12",
+          "kind": "점심식사",
+          "rows": 1
+        },
+        {
+          "month": "2026/12",
+          "kind": "저녁식사",
+          "rows": 1
+        },
+        {
+          "month": "2027/01",
+          "kind": "학사일정",
+          "rows": 37
+        },
+        {
+          "month": "2027/01",
+          "kind": "아침식사",
+          "rows": 0
+        },
+        {
+          "month": "2027/01",
+          "kind": "점심식사",
+          "rows": 0
+        },
+        {
+          "month": "2027/01",
+          "kind": "저녁식사",
+          "rows": 0
+        },
+        {
+          "month": "2027/02",
+          "kind": "학사일정",
+          "rows": 34
+        },
+        {
+          "month": "2027/02",
+          "kind": "아침식사",
+          "rows": 0
+        },
+        {
+          "month": "2027/02",
+          "kind": "점심식사",
+          "rows": 0
+        },
+        {
+          "month": "2027/02",
+          "kind": "저녁식사",
+          "rows": 0
+        }
+      ],
+      "errors": [],
+      "document_count": 50
+    }
+  },
+  "document_count": 3466,
+  "image_pages": 1274,
+  "attachment_pages": 2065
+}
