@@ -200,20 +200,10 @@
     const chatMessages = document.getElementById('chatMessages');
     const chatInput = document.getElementById('chatInput');
 
-    function appendMessage(text, sender, imageUrl) {
+    function appendMessage(text, sender) {
         const msgDiv = document.createElement('div');
         msgDiv.className = `message ${sender}`;
-        msgDiv.textContent = text;
-        if (imageUrl && imageUrl.startsWith('https://image.pollinations.ai/prompt/')) {
-            const img = document.createElement('img');
-            img.src = imageUrl;
-            img.alt = '요청한 그림';
-            img.style.cssText = 'width:100%;border-radius:12px;margin-top:10px';
-            img.addEventListener('error', () => {
-                img.replaceWith(document.createTextNode('앗, 그림을 불러오지 못했어요오. 잠시 후 다시 시도해 주세요!'));
-            });
-            msgDiv.appendChild(img);
-        }
+        msgDiv.innerHTML = text;
         chatMessages.appendChild(msgDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
@@ -251,7 +241,7 @@
             });
             const data = await response.json();
             removeTypingIndicator();
-            appendMessage(data.reply || "앗, 답변을 가져오지 못했어요오.", 'bot', data.image_url);
+            appendMessage(data.reply || "오류가 발생했습니다.", 'bot');
         } catch (error) {
             removeTypingIndicator();
             appendMessage("서버 연결에 실패했습니다.", 'bot');
@@ -260,4 +250,3 @@
 </script>
 </body>
 </html>
-

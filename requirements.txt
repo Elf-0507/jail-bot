@@ -2,5 +2,3 @@ Flask
 flask-cors
 google-generativeai
 gunicorn
-openai>=1.66.0,<3
-
