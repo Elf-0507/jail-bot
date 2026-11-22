@@ -188,7 +188,7 @@
         마산제일고등학교 AI
     </div>
     <div class="chat-messages" id="chatMessages">
-        <div class="message bot">환영합니다! <b>마산제일고등학교 공식 인공지능 챗봇</b>입니다.<br><br>학교 생활, 학사 일정, 동아리 정보 등 궁금한 점을 자유롭게 질문해 보세요! 🏫</div>
+        <div class="message bot">안녕하세요오~ 질문자쿤! <b>마산제일고 마스코트 제일콩</b>이에요 ✨<br><br>학교생활이나 공부하다 궁금한 게 생기면 편하게 물어봐 주세요~!</div>
     </div>
     <div class="chat-input-area">
         <input type="text" class="chat-input" id="chatInput" placeholder="질문을 입력하세요..." onkeypress="if(event.key==='Enter') sendMessage()">
@@ -200,10 +200,20 @@
     const chatMessages = document.getElementById('chatMessages');
     const chatInput = document.getElementById('chatInput');
 
-    function appendMessage(text, sender) {
+    function appendMessage(text, sender, imageUrl) {
         const msgDiv = document.createElement('div');
         msgDiv.className = `message ${sender}`;
-        msgDiv.innerHTML = text;
+        msgDiv.textContent = text;
+        if (imageUrl && imageUrl.startsWith('https://image.pollinations.ai/prompt/')) {
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = '요청한 그림';
+            img.style.cssText = 'width:100%;border-radius:12px;margin-top:10px';
+            img.addEventListener('error', () => {
+                img.replaceWith(document.createTextNode('앗, 그림을 불러오지 못했어요오. 잠시 후 다시 시도해 주세요!'));
+            });
+            msgDiv.appendChild(img);
+        }
         chatMessages.appendChild(msgDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
@@ -241,7 +251,7 @@
             });
             const data = await response.json();
             removeTypingIndicator();
-            appendMessage(data.reply || "오류가 발생했습니다.", 'bot');
+            appendMessage(data.reply || "앗, 답변을 가져오지 못했어요오.", 'bot', data.image_url);
         } catch (error) {
             removeTypingIndicator();
             appendMessage("서버 연결에 실패했습니다.", 'bot');
@@ -250,3 +260,4 @@
 </script>
 </body>
 </html>
+
