@@ -204,7 +204,10 @@
     function appendMessage(text, sender, imageUrl, sources, updatedAt, isLive) {
         const msgDiv = document.createElement('div');
         msgDiv.className = `message ${sender}`;
-        msgDiv.textContent = text;
+        const sourceNumbers = new Set(Array.isArray(sources) ? sources.map(source => Number(source.number)) : []);
+        msgDiv.textContent = sender === 'bot'
+            ? text.replace(/[ \t]*\[(\d+)\]/g, (marker, number) => sourceNumbers.has(Number(number)) ? '' : marker).trim()
+            : text;
         if (imageUrl && imageUrl.startsWith('https://image.pollinations.ai/prompt/')) {
             const img = document.createElement('img');
             img.src = imageUrl;
@@ -214,9 +217,12 @@
             msgDiv.appendChild(img);
         }
         if (Array.isArray(sources) && sources.length) {
-            const details = document.createElement('div');
+            const details = document.createElement('details');
             details.style.cssText = 'margin-top:12px;font-size:.8rem;line-height:1.5;border-top:1px solid #e0e6ed;padding-top:8px';
-            details.textContent = '공식 자료 출처';
+            const summary = document.createElement('summary');
+            summary.textContent = '출처 보기';
+            summary.style.cssText = 'cursor:pointer;color:#6e6e73;user-select:none';
+            details.appendChild(summary);
             sources.forEach(source => {
                 try {
                     const url = new URL(source.url);
@@ -226,7 +232,7 @@
                     link.target = '_blank';
                     link.rel = 'noopener noreferrer';
                     link.style.cssText = 'display:block;color:var(--jeil-blue);margin-top:4px';
-                    link.textContent = '[' + source.number + '] ' + source.title;
+                    link.textContent = source.title;
                     details.appendChild(link);
                 } catch (_) {}
             });
