@@ -188,7 +188,7 @@
         마산제일고등학교 AI
     </div>
     <div class="chat-messages" id="chatMessages">
-        <div class="message bot">안녕하세요오~ 질문자쿤! <b>마산제일고 마스코트 제일콩</b>이에요 ✨<br><br>학교생활이나 공부하다 궁금한 게 생기면 편하게 물어봐 주세요~!</div>
+        <div class="message bot">빼꼼…! 에헤헤헤~ 질문자쿤, <b>마산제일고 마스코트 제일콩</b> 왔어요오!! 🎀<br><br>궁금한 걸 요기에 톡 놓아주시면, 제일콩이 두 발 콩콩 뛰어가서 같이 살펴봐드릴게요~!</div>
     </div>
     <div class="chat-input-area">
         <input type="text" class="chat-input" id="chatInput" placeholder="질문을 입력하세요..." onkeypress="if(event.key==='Enter') sendMessage()">
@@ -213,7 +213,7 @@
             img.src = imageUrl;
             img.alt = '요청한 그림';
             img.style.cssText = 'width:100%;border-radius:12px;margin-top:10px';
-            img.addEventListener('error', () => img.replaceWith(document.createTextNode('그림을 불러오지 못했어요오. 잠시 후 다시 시도해 주세요!')));
+            img.addEventListener('error', () => img.replaceWith(document.createTextNode('어, 어라라?! 그림을 불러오다가 삐끗했어요오…! 쪼끔 뒤에 다시 요청해 주세요 🎀')));
             msgDiv.appendChild(img);
         }
         if (Array.isArray(sources) && sources.length) {
@@ -281,10 +281,10 @@
             const data = await response.json();
             pendingNeis = data.pending_neis || null;
             removeTypingIndicator();
-            appendMessage(data.reply || "오류가 발생했습니다.", 'bot', data.image_url, data.sources, data.live_fetched_at || data.knowledge_updated_at, Boolean(data.live_fetched_at));
+            appendMessage(data.reply || "어, 어라라?! 답변을 가져오지 못했어요오…! 다시 한 번 톡 보내주세요 🎀", 'bot', data.image_url, data.sources, data.live_fetched_at || data.knowledge_updated_at, Boolean(data.live_fetched_at));
         } catch (error) {
             removeTypingIndicator();
-            appendMessage("서버 연결에 실패했습니다.", 'bot');
+            appendMessage("에에엣, 서버 연결이 삐끗했어요오…! 쪼끔 뒤에 다시 톡 보내주세요 🎀", 'bot');
         }
     }
 </script>
